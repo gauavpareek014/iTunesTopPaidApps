@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context="com.uncc.inclass07test.MainActivity"
+    android:weightSum="1">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/refresh"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/refresh_icon" />
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ascending"
+            android:layout_alignParentEnd="true"
+            android:checked="true"
+            android:layout_weight="1"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/favListview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:headerDividersEnabled="false"
+        android:clickable="true"
+        android:layout_weight="1">
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/bottomLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="248dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/filteredApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filteredText"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/myrecyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
+            android:scrollbars="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.70"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/filteredApp"
+            />
+
+        <TextView
+            android:id="@+id/noFiltered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/noFilteredApp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
